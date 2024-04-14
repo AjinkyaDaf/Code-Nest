@@ -3,6 +3,7 @@ import "./Resume.css"
 import Navbar from '../../components/Navbar/Navbar'
 import Body from '../../components/ResumeBuilder/FormBody/Body'
 import Banner from '../../components/ResumeBuilder/FormBanner/Banner';
+
 function Resume() {
   return (
     <>
@@ -20,7 +21,8 @@ function Resume() {
     <br></br>
     <br></br>
     <Body/>
-    
+  
+  
     </div>
  
     </>

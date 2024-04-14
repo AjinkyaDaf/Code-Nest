@@ -4,6 +4,7 @@ import Step1img from '../../assets/step-1bannerimg.png';
 import Step2img from '../../assets/step-2bannerimg.png';
 import Step3img from '../../assets/step-3bannerimg.png';
 
+
 const StepsBanner = () => {
   return (
     <div className="steps-banner">

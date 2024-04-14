@@ -39,7 +39,7 @@
     color: rgba(0, 0, 0, 0.488);
   }
   
-  .text-container button {
+  .text-container button{
     background-image: linear-gradient(to right, #89b6f6 30%, #83b4cd  40%, #5089d9  100%);
     margin: 10px;
     padding: 14px 44px;

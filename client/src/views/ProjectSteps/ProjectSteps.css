@@ -1,0 +1,70 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: auto; Set height to 100% of viewport height */
+    width: auto;
+    background-image: url('');
+    background-size:cover;
+  }
+  
+  .project-steps-container {
+   background: transparent;
+   backdrop-filter: blur(5px);
+   
+    padding: 20px;
+    width: 100vh;
+  }
+  
+  .steps-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items at the top of the container */
+  }
+  
+  .vertical-line {
+    border-left: 2px solid #000;
+    height: 100%; /* Set height to 100% to span the entire height of the container */
+    position: relative;
+  }
+  
+  .steps-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+  }
+  
+  .steps-list li {
+    display: flex;
+    align-items: flex-start; /* Align items at the top of each list item */
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    margin-right: 20px;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    color: #000;
+  }
+  
+  .step-info {
+    color: #fff;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .steps-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .vertical-line {
+      display: none; /* Hide the vertical line on smaller screens */
+    }
+  }
+  
+  .span{
+    margin-left: 30px;
+  }
