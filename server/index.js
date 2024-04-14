@@ -44,9 +44,6 @@ const projectSchema = new mongoose.Schema({
 
 const Project = mongoose.model('Project', projectSchema);
 
-
-
-
 app.post('/api/projects', async (req, res) => {
   try {
     const {
@@ -76,13 +73,6 @@ app.post('/api/projects', async (req, res) => {
 
 
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
-  });
-}
 
 
 // ...
@@ -363,6 +353,35 @@ app.post('/api/submit', async (req, res) => {
 });
 
 
+// Define schema and model for newsletter subscription
+const newsletterSchema = new mongoose.Schema({
+  email: String,
+  timestamp: { type: Date, default: Date.now }
+});
+const Newsletter = mongoose.model('Newsletter', newsletterSchema);
+
+// API endpoint for subscribing to the newsletter
+app.post('/api/subscribe', async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    // Check if email already exists
+    const existingSubscriber = await Newsletter.findOne({ email });
+    if (existingSubscriber) {
+      return res.status(400).json({ message: 'Email already subscribed' });
+    }
+
+    // Create new subscriber
+    const newSubscriber = new Newsletter({ email });
+    await newSubscriber.save();
+
+    return res.status(200).json({ message: 'Subscription successful' });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 
 
@@ -374,7 +393,6 @@ if(process.env.NODE_ENV === "production"){
     res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
   });
 }
-
 
 
 const PORT = process.env.PORT || 5001;

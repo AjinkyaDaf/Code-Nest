@@ -7,7 +7,7 @@ const PricingPlan = () => {
         {
             name: "Premium",
             desc: "Unlock advanced features and resources for accelerated learning.",
-            price: 15,
+            price: 2999,
             isMostPop: true,
             features: [
                 "AI-Powered Coding Assistance",
@@ -22,16 +22,16 @@ const PricingPlan = () => {
         {
             name: "Basic",
             desc: "Access essential resources to kickstart your coding journey.",
-            price: 0,
+            price: 199,
             isMostPop: false,
             features: [
                 "Basic Coding Support",
                 "Tech News Updates",
                 "General Learning Guidelines",
                 "Community Recommended Resources",
-                "Limited Project Guidance",
+                "Limited Project Demo",
                 "Introductory Interview Tips",
-                "Limited Support",
+                // "Limited Support",
             ],
         },
     ];
@@ -62,7 +62,7 @@ const PricingPlan = () => {
                                     {item.name}
                                 </span>
                                 <div className='pricing-price'>
-                                    ${item.price} <span className="price-unit">/mo</span>
+                                ₹{item.price} <span className="price-unit">/mo</span>
                                 </div>
                                 <p className="pricing-desc">
                                     {item.desc}

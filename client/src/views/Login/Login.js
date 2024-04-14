@@ -20,7 +20,7 @@ function Login() {
             if (response.data.success) {
                 showToast('Login Successfully', 'success', 3000);
                 localStorage.setItem('user', JSON.stringify(response.data.data));
-                window.location.href = '/community';
+                window.location.href = '/';
             } else {
                 showToast('Invalid email or password', 'warning', 3000);
             }

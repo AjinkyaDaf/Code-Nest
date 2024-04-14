@@ -42,7 +42,9 @@ const HeroSection = () => {
         <p className="description">
          Code Nest: Your coding companion for AI-powered problem-solving, tech news updates, personalized learning, project collaboration, and career guidance. Join our vibrant community, practice coding challenges, and celebrate achievements. Click "Get Started" to elevate your coding experience!
         </p>
+        <a href='/signup'>
         <button className="get-started-btn">Get Started ›</button>
+        </a>
       </div>
       <div className="right-section"></div>
     </div>

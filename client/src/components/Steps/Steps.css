@@ -1,0 +1,133 @@
+/* Global Styles */
+.steps-container {
+  color: #9ca3af;
+  /* background-color: #111827; */
+  margin: 0 auto;
+  width: 80vw;
+  /* background: linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 10.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%); */
+}
+
+.steps-flex-container {
+  padding: 6rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.steps-flex-wrap {
+  display: flex;
+  /* border: 1px solid #fff; */
+  column-gap: 50px;
+  width: 100%;
+}
+
+.steps-content-section {
+  width: 40%;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.step-container {
+  display: flex;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.step-line {
+  height: 100%;
+  width: 2.5rem;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-line::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: #314056;
+  pointer-events: none;
+}
+
+.step-icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #64d2d0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  position: relative;
+  z-index: 10;
+}
+
+.steps-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.step-content {
+  padding-left: 1rem;
+}
+
+.step-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+  letter-spacing: wider;
+}
+
+.step-description {
+  line-height: 1.625;
+  color: #b2b9c6 !important;
+}
+
+.steps-hero-img {
+  width: 60%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  margin-top: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .steps-flex-wrap {
+    flex-direction: column;
+  }
+
+  .steps-content-section {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .steps-hero-img {
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .steps-flex-wrap {
+    flex-direction: row;
+  }
+
+  .steps-content-section {
+    width: 40%;
+  }
+
+  .steps-hero-img {
+    width: 50%;
+  }
+}

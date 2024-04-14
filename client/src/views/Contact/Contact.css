@@ -1,0 +1,129 @@
+.contact-main-container {
+  position: relative;
+  padding-top: 2rem; /* Adjust as needed */
+  padding-bottom: 5rem; /* Adjust as needed */
+}
+
+.contact-content-container {
+  position: relative;
+  z-index: 10;
+  max-width: 40vw;
+  margin: 0 auto;
+  color: #d1d5db;
+  text-align: center;
+}
+
+.contact-img{
+    height: 60vh;
+}
+
+.contact-content-container h2 {
+  color: #26C6DA;
+}
+
+.contact-content-container h1 {
+  color: white;
+}
+
+.contact-form-container {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.314);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 75vw;
+  margin: 5% auto;
+ 
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-right: 2rem;
+}
+
+.contact-form-container label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.081);
+  color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-top: 10px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea::placeholder {
+  text-align: center;
+  font-size: smaller;
+}
+
+.contact-form-container textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact-button {
+  width: 55%;
+  background-image: linear-gradient(to right, #16222a4a 0%, #62cbffc3  51%, #16222a61  100%);
+  margin: 10px auto;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eeeeee45;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 25%;
+}
+
+.contact-button:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+         
+/* For screens smaller than 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+    .contact-content-container {
+      max-width: 90%;
+    }
+  
+    .contact-form-container {
+      max-width: 90%;
+      margin-top: 10%;
+    }
+  }
+  
+  /* For screens smaller than 576px (mobile phones) */
+  @media (max-width: 576px) {
+    .contact-content-container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .contact-form-container {
+      padding: 1rem;
+    }
+  
+    .contact-button {
+      width: 70%;
+      margin-left: 15%;
+    }
+  }
+  

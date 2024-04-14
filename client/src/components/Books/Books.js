@@ -16,6 +16,7 @@ const Books = () => {
     }
     return (
         <>
+        <div className="animation-container">
             <Navbar />
 
             <div className="book-header">
@@ -42,6 +43,7 @@ const Books = () => {
                 {
                     <BookCard book={bookData} />
                 }
+            </div>
             </div>
         </>
     )

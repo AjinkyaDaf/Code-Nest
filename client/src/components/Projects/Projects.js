@@ -7,6 +7,7 @@ import "./Projects.css"
 function Projects() {
   return (
     <>
+    <div className='animation-container'>
     <Navbar/>
     <div className="project-headline">
             
@@ -16,6 +17,7 @@ function Projects() {
         <hr/>
     <ProjectForm/>
     <ProjectCard/>
+    </div>
     </>
   )
 }

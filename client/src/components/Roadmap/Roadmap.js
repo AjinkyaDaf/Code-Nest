@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar'
 function Roadmap() {
     return (
         <>
+        <div className='animation-container'>
             <div className="roadmap">
                 <Navbar />
                 <div className="top-section">
@@ -17,6 +18,7 @@ function Roadmap() {
                 <br />
                 <hr />
                 <RoadmapCard categories={data.categories} />
+            </div>
             </div>
         </>
     );

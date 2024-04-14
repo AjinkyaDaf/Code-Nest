@@ -39,28 +39,32 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo"><img src={logo} className='cn-logo' alt='logo'/></div>
+      <div className="logo">
+        <a href='/'>
+          <img src={logo} className='cn-logo' alt='logo' />
+        </a>
+      </div>
 
       <div className={`menu ${showMenu ? 'show' : ''}`}>
         <Link to="/"> Home</Link>
         <Link to="/newsletter"> Newsletter</Link>
         <div className="submenu">
-          <Link to="/"> Resources&nbsp;<img src={drop} className='cn-drop' alt='drop-icon'/> </Link>
+          <Link to="/"> Resources&nbsp;<img src={drop} className='cn-drop' alt='drop-icon' /> </Link>
           <div className="dropdown-content">
-            <Link to="/roadmaps">Roadmaps</Link><hr/>
-            <Link to="/projects">Projects</Link><hr/>
-            <Link to="/books">Books</Link><hr/>
+            <Link to="/roadmaps">Roadmaps</Link><hr />
+            <Link to="/projects">Projects</Link><hr />
+            <Link to="/books">Books</Link><hr />
             <Link to="/resume-builder">Resume Builder</Link>
             {/* <Link to="/others">Others</Link> */}
           </div>
         </div>
         <div className="submenu">
-          <Link to="/">Practice&nbsp;<img src={drop} className='cn-drop' alt='drop-icon'/></Link>
+          <Link to="/">Practice&nbsp;<img src={drop} className='cn-drop' alt='drop-icon' /></Link>
           <div className="dropdown-content">
-            <Link to="/aptitude">Aptitude</Link><hr/>
-            <Link to="/reasoning">Logical Reasoning</Link><hr/>
-            <Link to="/verbal">Verbal Ability</Link><hr/>
-            <Link to="/interview-questions">Interview Questions</Link><hr/>
+            <Link to="/aptitude">Aptitude</Link><hr />
+            <Link to="/reasoning">Logical Reasoning</Link><hr />
+            <Link to="/verbal">Verbal Ability</Link><hr />
+            <Link to="/interview-questions">Interview Questions</Link><hr />
             <Link to="/problems">Coding Problems</Link>
           </div>
         </div>
@@ -70,7 +74,7 @@ const Navbar = () => {
       <div className="auth-buttons">
         {loggedIn ? (
           <>
-            <p className="user-name"><FontAwesomeIcon icon={faUser} className='user-profile'/> {userName}</p>
+            <p className="user-name"><FontAwesomeIcon icon={faUser} className='user-profile' /> {userName}</p>
             <button className="logout-btn" onClick={logout}>
               Logout
             </button>
@@ -84,7 +88,11 @@ const Navbar = () => {
       </div>
 
       <div className="mobile-menu-icon" onClick={toggleMenu}>
-        
+
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+
       </div>
     </nav>
   );

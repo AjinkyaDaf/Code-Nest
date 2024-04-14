@@ -95,7 +95,7 @@ function Body() {
           setInformation={setResumeInformation}
         />
        <div className={styles.formContainer}>
-        <p className={styles.formHeading} >Resume</p>
+        <p className={styles.formHeading} >Resume Preview</p>
         </div>
         <Resume
           ref={resumeRef}

@@ -1,0 +1,33 @@
+
+
+.dialog-title {
+    background-color: #d92626;
+    color: #ffffff;
+    font-size: 2rem;
+    /* White text */
+}
+
+.dialog-content {
+    padding: 20px;
+    color: #131212;
+    /* White text */
+
+}
+
+.dialog-actions {
+    padding: 10px 20px;
+    justify-content: center;
+    /* Center align buttons */
+}
+
+.dialog-button {
+    background-color: #2196f3;
+    /* Blue button */
+    color: #fff;
+   
+}
+
+.dialog-button:hover {
+    background-color: #1976d2;
+    /* Darker blue on hover */
+}

@@ -7,7 +7,7 @@ import Banner from '../../components/ResumeBuilder/FormBanner/Banner';
 function Resume() {
   return (
     <>
-    <div className='Resume'>
+    <div className='Resume animation-container'>
     <Navbar/>
     <br></br>
     
